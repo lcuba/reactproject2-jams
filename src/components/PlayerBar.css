@@ -44,11 +44,13 @@
   display: none;
 }
 
-#play-pause[playState="playing"] .ion-pause {
+#play-pause > span.ion-play,
+#play-pause > span.ion-pause {
   display: block;
 }
 
-#play-pause[playState="playing"] .ion-play {
+#play-pause > span.ion-pause
+#play-pause > span.ion-play {
   display: none;
 }
 

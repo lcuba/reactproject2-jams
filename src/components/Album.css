@@ -52,48 +52,48 @@
   width: 80px;
 }
 
-.song {
+tr {
   border-bottom: 1px solid hsla(0, 0%, 100%, .30);
   background: hsla(0, 0%, 20%, .20);
   transition: all 0.2s ease;
 }
 
-.song .song-title {
+tr .song-title {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.35em;
   font-weight: bold;
 }
 
-.song .song-duration {
+tr .song-duration {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.35em;
 }
 
-.song:hover .ion-play,
-.song.playing .ion-pause,
-.song.paused .ion-play {
+tr:hover .ion-play,
+tr.playing .ion-pause,
+tr.paused .ion-play {
   display: block;
 }
 
-.song .ion-play,
-.song .ion-pause,
-.song:hover .song-number,
-.song.playing .ion-play,
-.song.playing .song-number,
-.song.paused .ion-pause,
-.song.paused .song-number {
+tr .ion-play,
+tr .ion-pause,
+tr:hover .song-number,
+tr.playing .ion-play,
+tr.playing .song-number,
+tr.paused .ion-pause,
+tr.paused .song-number {
   display: none;
 }
 
-.song:hover {
+tr:hover {
   background: hsla(0, 0%, 0%, .05)
 }
 
-.song:hover .song-title {
+tr:hover .song-title {
   color: hsla(0, 0%, 100%, 1);
 }
 
-.song:last-child {
+tr:last-child {
   border: none;
 }
 
@@ -101,7 +101,7 @@
   padding: .75em;
 }
 
-.song button {
+tr button {
   border: none;
   background: none;
   color: #ccc;
@@ -109,7 +109,22 @@
   padding: 0;
 }
 
-.song button:focus {
-  outline: none;
+tr:focus {
+  background: hsla(0,0%,0%,0);
   text-shadow: 2px 4px 3px hsla(0,0%,0%,.25);
+}
+
+tr:focus .song-number {
+  display: none;
+}
+tr:focus .ion-play {
+  display: block;
+}
+
+tr.playing:focus .song-number,
+tr.playing:focus .ion-play {
+  display: none;
+}
+tr.playing:focus .ion-pause {
+  display: block;
 }

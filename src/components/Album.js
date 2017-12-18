@@ -124,7 +124,7 @@ class Album extends Component {
           <tbody id='song-list'>
           {
             this.state.album.songs.map((song, index) =>
-              <tr className='song' key={index} onClick={() => this.handleSongClick(song)}>
+              <tr className={this.state.isPlaying ? 'paused' : 'playing'} key={index} onClick={() => this.handleSongClick(song)}>
                 <td className='song-actions'>
                   <button>
                     <span className="song-number">{index + 1}</span>
@@ -133,7 +133,7 @@ class Album extends Component {
                   </button>
                 </td>
                 <td className='song-title'>{song.title}</td>
-                <td className='song-duration'>{song.duration}</td>
+                <td className='song-duration'>{this.formatTime(song.duration)}</td>
               </tr>
             )
           }
@@ -142,15 +142,15 @@ class Album extends Component {
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
-          currentTime={this.formatTime(this.audioElement.currentTime)}
-          duration={this.formatTime(this.audioElement.duration)}
+          currentTime={this.audioElement.currentTime}
+          duration={this.audioElement.duration}
           volume={this.audioElement.volume}
-          formatTime={() => this.formatTime(this.rawTime)}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={(e) => this.handleTimeChange(e)}
           handleVolumeChange={(e) => this.handleVolumeChange(e)}
+          formatTime={(e) => this.formatTime(e)}
         />
       </section>
     );

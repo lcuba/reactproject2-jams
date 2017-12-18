@@ -1,0 +1,115 @@
+.album {
+  width: 100%;
+  max-width: 850px;
+  margin: 4rem auto 150px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#album-info {
+  overflow: hidden;
+}
+
+#album-title {
+  font-family: 'Bungee', cursive;
+  font-size: 2em;
+}
+
+.artist {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.7em;
+  margin-top: -10px;
+}
+
+#release-info {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.3em;
+  color: #bbb;
+  margin-top: -10px;
+}
+
+#album-cover-art {
+  float: left;
+  margin-right: 2rem;
+  position: relative;
+}
+
+#song-list {
+  border-collapse: collapse;
+  clear: both;
+  font-weight: 100;
+  margin-top: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+#song-number-column {
+  width: 40px;
+}
+
+#song-duration-column {
+  width: 80px;
+}
+
+.song {
+  border-bottom: 1px solid hsla(0, 0%, 100%, .30);
+  background: hsla(0, 0%, 20%, .20);
+  transition: all 0.2s ease;
+}
+
+.song .song-title {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.35em;
+  font-weight: bold;
+}
+
+.song .song-duration {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.35em;
+}
+
+.song:hover .ion-play,
+.song.playing .ion-pause,
+.song.paused .ion-play {
+  display: block;
+}
+
+.song .ion-play,
+.song .ion-pause,
+.song:hover .song-number,
+.song.playing .ion-play,
+.song.playing .song-number,
+.song.paused .ion-pause,
+.song.paused .song-number {
+  display: none;
+}
+
+.song:hover {
+  background: hsla(0, 0%, 0%, .05)
+}
+
+.song:hover .song-title {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.song:last-child {
+  border: none;
+}
+
+.song-actions {
+  padding: .75em;
+}
+
+.song button {
+  border: none;
+  background: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0;
+}
+
+.song button:focus {
+  outline: none;
+  text-shadow: 2px 4px 3px hsla(0,0%,0%,.25);
+}

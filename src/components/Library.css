@@ -1,0 +1,46 @@
+* {
+  text-decoration: none;
+}
+
+.library {
+    width: 100%;
+    max-width: 800px;
+    margin: 5rem auto 150px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+#albums {
+  display: flex;
+  margin-bottom: 2.5em;
+  font-family: 'Bungee', cursive;
+  padding-bottom: .8em;
+  border-bottom: 1px solid hsla(0, 0%, 100%, .35);
+}
+
+.album-img {
+  float: left;
+  position: relative;
+  margin-right: 2em;
+}
+
+.album-title {
+  font-family: 'Bungee', cursive;
+  font-size: 1.83em;
+  color: #ccc;
+}
+
+.album-artist {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.7em;
+  margin-top: -10px;
+  color: #ccc;
+}
+
+.album-length {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.3em;
+  color: #bbb;
+  margin-top: -10px;
+}

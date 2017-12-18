@@ -1,0 +1,52 @@
+.landing {
+  display: grid;
+  grid-template-columns: 40px 40px auto 80px;
+  grid-template-rows: 100px auto;
+}
+
+.hero-title {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  border-radius: 10px;
+  justify-self: center;
+  align-self: center;
+  font-family: 'Bungee', cursive;
+  font-size: 2.5em;
+  margin-top: 100px;
+}
+
+.selling-points {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-self: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.selling-points .point {
+  margin-top: 100px;
+  background: hsla(0, 0%, 12%, 0.2);
+  box-shadow: 5px 5px 3px #000;
+  padding: auto 1px auto 1px;
+  border-radius: 8px;
+}
+
+.selling-points .point-description {
+  font-size: 1.5em;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  color: #aaa;
+}
+
+.selling-points .point-title {
+  font-family: 'Bungee', cursive;
+  font-size: 1.8em;
+  padding-left: 8px;
+}

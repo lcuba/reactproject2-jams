@@ -108,7 +108,7 @@ class Album extends Component {
     return (
       <section className='album'>
         <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} />
+          <img id="album-cover-art" src={this.state.album.albumCover} alt='Kevin Macleod Medium Electronic album cover' />
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -124,9 +124,9 @@ class Album extends Component {
           <tbody id='song-list'>
           {
             this.state.album.songs.map((song, index) =>
-              <tr className={this.state.isPlaying ? 'paused' : 'playing'} key={index} onClick={() => this.handleSongClick(song)}>
+              <tr key={index} tabIndex={index} onClick={() => this.handleSongClick(song)}>
                 <td className='song-actions'>
-                  <button>
+                  <button className={this.state.isPlaying ? 'paused' : 'playing'}>
                     <span className="song-number">{index + 1}</span>
                     <span className="ion-play"></span>
                     <span className="ion-pause"></span>
